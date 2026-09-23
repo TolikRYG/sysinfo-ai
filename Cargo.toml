@@ -1,0 +1,39 @@
+[package]
+name = "sysinfo-ai"
+version = "0.3.0"
+edition = "2021"
+description = "Native Windows system inventory with explicit-consent OpenRouter analysis"
+publish = false
+
+[dependencies]
+# Keep API-sensitive dependencies on the exact versions used by this source.
+# No persistence, WebView, browser frontend, or WGPU backend.
+eframe = { version = "=0.33.0", default-features = false, features = ["default_fonts", "glow"] }
+egui = { version = "=0.33.0", default-features = false, features = ["default_fonts"] }
+sysinfo = { version = "=0.33.1", default-features = false, features = ["system", "disk", "network"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+# On Windows native-tls uses the OS Schannel implementation, not an OpenSSL DLL.
+reqwest = { version = "=0.12.28", default-features = false, features = ["blocking", "json", "native-tls"] }
+anyhow = "1"
+
+[target.'cfg(windows)'.dependencies]
+wmi = { version = "=0.18.4", default-features = false }
+# Additional Windows API bindings: accurate 64-bit DXGI memory figures and
+# a native error dialog if the graphics context cannot be created.
+windows = { version = "=0.62.2", features = [
+    "Win32_Foundation",
+    "Win32_Graphics_Dxgi",
+    "Win32_Graphics_Dxgi_Common",
+    "Win32_UI_WindowsAndMessaging",
+] }
+
+[profile.release]
+opt-level = "s"
+lto = true
+codegen-units = 1
+strip = true
+debug = false
+incremental = false
+# Keep unwinding so worker panics can be converted into visible UI errors.
+panic = "unwind"

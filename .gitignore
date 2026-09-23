@@ -1,0 +1,11 @@
+/target/
+
+/dist/*
+!/dist/sysinfo-ai.exe
+
+/system_report.json
+/ai_analysis.md
+*.tmp
+
+# API keys must never be stored by the application.
+.env
