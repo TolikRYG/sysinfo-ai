@@ -7,7 +7,7 @@
 </p>
 
 <p align="center">
-  <a href="./dist/sysinfo-ai.exe?raw=true">
+  <a href="https://raw.githubusercontent.com/TolikRYG/sysinfo-ai/main/dist/sysinfo-ai.exe">
     <img src="https://img.shields.io/badge/%D0%A1%D0%BA%D0%B0%D1%87%D0%B0%D1%82%D1%8C-Windows%20x64-2563EB?style=for-the-badge" alt="Скачать SysInfo AI для Windows x64">
   </a>
 </p>
@@ -20,7 +20,7 @@
 
 ## Скачать и запустить
 
-**[Скачать sysinfo-ai.exe](./dist/sysinfo-ai.exe?raw=true)** — файл из папки `dist` текущей ветки репозитория.
+**[Скачать sysinfo-ai.exe](https://raw.githubusercontent.com/TolikRYG/sysinfo-ai/main/dist/sysinfo-ai.exe)** — файл из папки `dist` текущей ветки репозитория.
 
 Сохраните `.exe` в удобную папку и запустите. Установщик, Rust и средства разработки для запуска готовой сборки не нужны.
 

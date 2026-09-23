@@ -7,7 +7,7 @@
 </p>
 
 <p align="center">
-  <a href="./dist/sysinfo-ai.exe?raw=true">
+  <a href="https://raw.githubusercontent.com/TolikRYG/sysinfo-ai/main/dist/sysinfo-ai.exe">
     <img src="https://img.shields.io/badge/Download-Windows%20x64-2563EB?style=for-the-badge" alt="Download SysInfo AI for Windows x64">
   </a>
 </p>
@@ -20,7 +20,7 @@ Hardware inventory runs locally. AI analysis is a separate, optional feature: a 
 
 ## Download and run
 
-**[Download sysinfo-ai.exe](./dist/sysinfo-ai.exe?raw=true)** — the file in the `dist` directory on the current repository branch.
+**[Download sysinfo-ai.exe](https://raw.githubusercontent.com/TolikRYG/sysinfo-ai/main/dist/sysinfo-ai.exe)** — the file in the `dist` directory on the current repository branch.
 
 Save the `.exe` to a folder of your choice and run it. No installer, Rust installation, or development tools are needed to run a prebuilt binary.
 
